@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <Routes>
-      
-    </Routes>
+   <Routes>
+     <Route path='/' element={App()} />
+   </Routes>
   </BrowserRouter>
 );
