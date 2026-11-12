@@ -41,5 +41,11 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/scrimba/learn-react-router-6/issues"
+  },
+  "allowScripts": {
+    "protobufjs@7.2.3": true,
+    "protobufjs@6.11.3": true,
+    "core-js@2.6.12": true,
+    "esbuild@0.17.15": true
   }
 }
