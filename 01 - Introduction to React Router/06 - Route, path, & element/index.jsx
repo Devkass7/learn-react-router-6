@@ -14,6 +14,8 @@ function About(){
       <h2>About Me</h2>
       <hr />
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque harum minus quod suscipit delectus ad itaque a, quisquam numquam alias commodi natus doloremque odio porro recusandae illum? Enim, omnis nulla?</p>
+      
+      <p>I am a scientist</p>
 
     </div>
   )
