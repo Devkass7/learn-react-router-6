@@ -4,17 +4,18 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
+   <BrowserRouter>
+   <Routes>
+    <Route path="/" element = {<Home />}>Home</Route>
+    <Route path="/about" element= {<About />}>About</Route>
+   </Routes>
+   </BrowserRouter>
+     
   );
 }
 
 function Home() {
-  return <h1>Hello, React Router!</h1>;
+  return (<h1>Hello, React Router!</h1>);
 }
 
 function About() {
