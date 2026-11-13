@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes,Link } from "react-router-dom"
 
 function App() {
   return (
@@ -22,7 +22,10 @@ function About(){
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  
   <BrowserRouter>
+  <Link to="/">Home</Link>
+    <Link to="/about">About</Link>
    <Routes>
      <Route path='/' element={<App />} />
      <Route path='/about' element={<About />}/>
