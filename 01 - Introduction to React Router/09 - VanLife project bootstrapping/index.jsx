@@ -1,5 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import "./index.css"
+
+
+function Nav(){
+  return(
+    <nav className='nav'>
+      <div>#VANLIFE</div>
+      <div>
+        <ul>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/">Home</Link></li>
+        </ul>
+      </div>
+    </nav>
+  )
+}
+
+
+function Home(){
+  return(
+    <>
+    <Nav />
+    </>
+  )
+}
 
 /**
  * Challenge:
@@ -19,7 +45,12 @@ import ReactDOM from 'react-dom/client';
 
 function App() {
   return (
-    <h1>Start here</h1>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home />}/>
+    </Routes>
+    
+    </BrowserRouter>
   )
 }
 
