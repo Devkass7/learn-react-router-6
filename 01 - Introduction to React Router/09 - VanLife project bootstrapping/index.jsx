@@ -21,10 +21,24 @@ function Nav(){
 
 function Home(){
   return(
+    <div className='home'>
+    <Nav />
+    <img className='van' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZVOvoIVD11vYcKh0srLGbDIN9Qsbpjx6UFslEmpzoKw&s=10" alt="" />
+
+
+    </div>
+  )
+}
+
+function About(){
+  return(
     <>
     <Nav />
-    </>
-  )
+  <div className="about">
+  
+    <h2>About Vanlife</h2>  <hr />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quae repellat possimus illum ipsum non eius consequuntur neque suscipit maiores totam exercitationem facilis ex molestiae quisquam, magni reiciendis molestias. Beatae!</p>
+  </div>  </>)
 }
 
 /**
@@ -47,7 +61,9 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
+      
       <Route path='/' element={<Home />}/>
+      <Route path="/about" element = {<About />} />
     </Routes>
     
     </BrowserRouter>
