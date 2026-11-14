@@ -25,6 +25,11 @@ function Home(){
     <Nav />
     <img className='van' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZVOvoIVD11vYcKh0srLGbDIN9Qsbpjx6UFslEmpzoKw&s=10" alt="" />
 
+    <h2>Don't ride in an SUV </h2>
+    <p>Whether you’re moving furniture, hauling supplies, or planning a weekend road trip, we have a reliable van ready for you. Book online in minutes with transparent pricing, unlimited mileage options, and free cancellation up to 24 hours before pickup.
+
+</p>
+
 
     </div>
   )
