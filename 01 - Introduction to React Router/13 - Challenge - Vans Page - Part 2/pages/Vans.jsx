@@ -18,17 +18,36 @@ import { useState, useEffect } from "react";
  */
 
 export default function Vans() {
-  useEffect(() => {
+const [vans, setVans] = useState([])
+
+ useEffect(() => {
     async function getVans() {
       try {
         const req = await fetch("/api/vans");
-        const res = await req.json();
-        console.log(res);
+        const  res = await req.json();
+
+        setVans(res)
+
+        // res.vans.map(van =>{
+        //     console.log(van)
+        // })
+
+       
+        
       } catch (error) {
-        console.error("Error Feching Data", error.json());
+        console.error("Error Feching Data");
       }
+      
     }
+
+    getVans()
+
+    console.log(vans);
+    
+   
   }, []);
+
+
 
   return <h1>hi</h1>;
 }
