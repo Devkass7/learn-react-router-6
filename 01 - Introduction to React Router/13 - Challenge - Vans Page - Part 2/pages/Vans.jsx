@@ -1,5 +1,7 @@
 import React from "react"
 
+import "../server "
+
 /**
  * Challenge: Fetch and map over the data to display it on
  * the vans page. For an extra challenge, spend time styling
@@ -16,6 +18,17 @@ import React from "react"
 
 
 export default function Vans() {
+
+    const data = async function getVans() {
+        try {
+            const req = await fetch("url")
+            const res = req.json()
+        } catch (error) {
+            console.error("Error Feching Data", error.json())
+        }
+        
+    }
+
     return (
         <h1>Vans page goes here 🚐</h1>
     )
