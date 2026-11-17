@@ -1,5 +1,5 @@
-import React from "react"
-import { useState, useEffect } from "react"
+import React from "react";
+import { useState, useEffect } from "react";
 
 // import "../server "
 
@@ -7,7 +7,7 @@ import { useState, useEffect } from "react"
  * Challenge: Fetch and map over the data to display it on
  * the vans page. For an extra challenge, spend time styling
  * it to look like the Figma design.
- * 
+ *
  * Hints:
  * 1. Use `fetch(/api/vans)` to kick off the request to get the
  *    data from our fake Mirage JS server
@@ -17,21 +17,18 @@ import { useState, useEffect } from "react"
  *    a function". You can ignore it for now.
  */
 
-
 export default function Vans() {
-
-    const data = async function getVans() {
-        try {
-            const req = await fetch("/api/vans")
-            const res = req.json()
-            console.log(res)
-        } catch (error) {
-            console.error("Error Feching Data", error.json())
-        }
-        
+  useEffect(() => {
+    async function getVans() {
+      try {
+        const req = await fetch("/api/vans");
+        const res = req.json();
+        console.log(res);
+      } catch (error) {
+        console.error("Error Feching Data", error.json());
+      }
     }
+  }, []);
 
-    return (
-        <h1>{data}</h1>
-    )
+  return <h1>{data}</h1>;
 }
