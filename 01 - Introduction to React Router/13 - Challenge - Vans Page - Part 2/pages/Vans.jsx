@@ -1,6 +1,7 @@
 import React from "react"
+import { useState, useEffect } from "react"
 
-import "../server "
+// import "../server "
 
 /**
  * Challenge: Fetch and map over the data to display it on
@@ -21,7 +22,7 @@ export default function Vans() {
 
     const data = async function getVans() {
         try {
-            const req = await fetch(/api/vans)
+            const req = await fetch("/api/vans")
             const res = req.json()
             console.log(res)
         } catch (error) {
@@ -31,6 +32,6 @@ export default function Vans() {
     }
 
     return (
-        <h1>Vans page goes here 🚐</h1>
+        <h1>{data}</h1>
     )
 }
