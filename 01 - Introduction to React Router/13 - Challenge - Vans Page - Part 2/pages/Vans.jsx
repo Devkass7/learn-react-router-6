@@ -21,8 +21,9 @@ export default function Vans() {
 
     const data = async function getVans() {
         try {
-            const req = await fetch("url")
+            const req = await fetch(/api/vans)
             const res = req.json()
+            console.log(res)
         } catch (error) {
             console.error("Error Feching Data", error.json())
         }
