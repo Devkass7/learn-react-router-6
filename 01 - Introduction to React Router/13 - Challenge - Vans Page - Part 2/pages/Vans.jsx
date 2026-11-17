@@ -22,7 +22,7 @@ export default function Vans() {
     async function getVans() {
       try {
         const req = await fetch("/api/vans");
-        const res = req.json();
+        const res = await req.json();
         console.log(res);
       } catch (error) {
         console.error("Error Feching Data", error.json());
@@ -30,5 +30,5 @@ export default function Vans() {
     }
   }, []);
 
-  return <h1>{data}</h1>;
+  return <h1>hi</h1>;
 }
